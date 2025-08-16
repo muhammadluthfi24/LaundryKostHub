@@ -1,0 +1,50 @@
+body {
+    transition: background 0.8s ease, color 0.8s ease;
+}
+.container {
+    transition: background 0.8s ease, color 0.8s ease, box-shadow 0.8s ease;
+}
+body input, body select, body button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+#calculateBtn, #addServiceBtn {
+    margin-top: 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#calculateBtn:hover, #addServiceBtn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+#result {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #e7f3e7;
+    border-left: 5px solid #4CAF50;
+    border-radius: 12px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+#historyItems {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.history-item {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}

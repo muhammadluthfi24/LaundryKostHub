@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LaundryKost</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.0/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body id="body" class="bg-gradient-to-br from-blue-200 to-indigo-300 min-h-screen flex justify-center items-start p-6 transition-colors duration-500">
+
+<div class="container bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 max-w-lg w-full mt-10 transition-colors duration-500">
+    <div class="flex justify-between items-center mb-5">
+        <h1 class="text-3xl font-bold text-gray-700 dark:text-gray-200">LaundryKost</h1>
+        <button id="darkModeBtn" class="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 px-3 py-1 rounded-xl text-sm">Dark/Light</button>
+    </div>
+
+    <label>Jumlah Pakaian (kg)</label>
+    <input type="number" id="weight" min="0" placeholder="Masukkan jumlah pakaian">
+
+    <label>Jenis Layanan</label>
+    <select id="service"></select>
+
+    <button id="calculateBtn">Hitung Biaya</button>
+
+    <div id="result"></div>
+
+    <div class="mt-6">
+        <h2>Tambah Layanan Baru</h2>
+        <div class="flex gap-2">
+            <input type="text" id="newServiceName" placeholder="Nama layanan">
+            <input type="number" id="newServicePrice" placeholder="Harga/kg">
+            <input type="text" id="newServiceTime" placeholder="Estimasi">
+        </div>
+        <button id="addServiceBtn">Tambah</button>
+    </div>
+
+    <div class="mt-6">
+        <h2>Filter Riwayat</h2>
+        <select id="filterService"></select>
+    </div>
+
+    <div class="mt-6">
+        <h2>Riwayat Laundry</h2>
+        <div id="historyItems"></div>
+    </div>
+
+    <div class="mt-6">
+        <h2>Grafik Pengeluaran Laundry</h2>
+        <canvas id="laundryChart"></canvas>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
